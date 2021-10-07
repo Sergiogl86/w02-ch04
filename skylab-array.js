@@ -6,6 +6,7 @@ class SkylabArray {
   push(value) {
     this[this.length] = value;
     this.length = this.length + 1;
+    return this.length
   }
 
   some(value) {
