@@ -6,7 +6,7 @@ class SkylabArray {
   push(value) {
     this[this.length] = value;
     this.length = this.length + 1;
-    return this.length
+    return this.length;
   }
 
   some(value) {
@@ -93,3 +93,7 @@ function length(array) {
   
 return arrayLength
 } */
+
+module.exports = {
+  SkylabArray,
+};
