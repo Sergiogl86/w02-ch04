@@ -1,11 +1,13 @@
 // Se crea el Array
 
-class skylabArray {
+class SkylabArray {
   length = 0;
+
   push(value) {
     this[this.length] = value;
     this.length = this.length + 1;
   }
+
   some(value) {
     if (this.length === 0) {
       return false;
@@ -19,25 +21,35 @@ class skylabArray {
       return false;
     }
   }
+
+  find(value) {
+    const findFunction = value;
+    for (let i = 0; i < this.length; i++) {
+      if (findFunction(this[i])) {
+        return this[i];
+      }
+    }
+    return undefined;
+  }
 }
 
-const prueba = new skylabArray();
+const prueba = new SkylabArray();
 
-prueba.push(5);
+prueba.push("casa");
 
-prueba.push(9);
+prueba.push("toro");
 
-prueba.push(5);
+prueba.push("salsa");
 
-prueba.push(8);
+prueba.push("nada");
 
 console.log(prueba[1]);
 
 console.log(prueba);
 
-const even = (element) => element % 2 === 0;
+const even = (element) => element === "error";
 
-console.log(prueba.some(even));
+console.log(prueba.find(even));
 
 //prueba.push(5);
 
