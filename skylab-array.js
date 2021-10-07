@@ -6,7 +6,7 @@ class SkylabArray {
   push(value) {
     this[this.length] = value;
     this.length = this.length + 1;
-    return this.length
+    return this.length;
   }
 
   some(value) {
@@ -36,7 +36,6 @@ class SkylabArray {
   filter(value) {
     const auxArray = new SkylabArray();
     const filterFunction = value;
-    debugger;
     for (let i = 0; i < this.length; i++) {
       if (filterFunction(this[i])) {
         auxArray.push(this[i]);
@@ -93,3 +92,7 @@ function length(array) {
   
 return arrayLength
 } */
+
+module.exports = {
+  SkylabArray,
+};
