@@ -31,25 +31,40 @@ class SkylabArray {
     }
     return undefined;
   }
+  filter(value) {
+    const auxArray = new SkylabArray();
+    const filterFunction = value;
+    debugger;
+    for (let i = 0; i < this.length; i++) {
+      if (filterFunction(this[i])) {
+        auxArray.push(this[i]);
+      }
+    }
+    if (auxArray.length === 0) {
+      return undefined;
+    } else {
+      return auxArray;
+    }
+  }
 }
 
 const prueba = new SkylabArray();
 
-prueba.push("casa");
+prueba.push(15);
 
-prueba.push("toro");
+prueba.push(25);
 
-prueba.push("salsa");
+prueba.push(35);
 
-prueba.push("nada");
+prueba.push(52);
 
-console.log(prueba[1]);
+//console.log(prueba[1]);
 
-console.log(prueba);
+//console.log(prueba);
 
-const even = (element) => element === "error";
+const even = (element) => element >= 30;
 
-console.log(prueba.find(even));
+console.log(prueba.filter(even));
 
 //prueba.push(5);
 
