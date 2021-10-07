@@ -36,7 +36,6 @@ class SkylabArray {
   filter(value) {
     const auxArray = new SkylabArray();
     const filterFunction = value;
-    debugger;
     for (let i = 0; i < this.length; i++) {
       if (filterFunction(this[i])) {
         auxArray.push(this[i]);
