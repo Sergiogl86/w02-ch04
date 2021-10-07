@@ -31,6 +31,7 @@ class SkylabArray {
     }
     return undefined;
   }
+
   filter(value) {
     const auxArray = new SkylabArray();
     const filterFunction = value;
@@ -46,11 +47,20 @@ class SkylabArray {
       return auxArray;
     }
   }
+
+  map(value) {
+    const auxArray = new SkylabArray();
+    const mapFunction = value;
+    for (let i = 0; i < this.length; i++) {
+      auxArray.push(mapFunction(this[i]));
+    }
+    return auxArray;
+  }
 }
 
 const prueba = new SkylabArray();
 
-prueba.push(15);
+prueba.push("caca");
 
 prueba.push(25);
 
@@ -62,9 +72,11 @@ prueba.push(52);
 
 //console.log(prueba);
 
-const even = (element) => element >= 30;
+const even = prueba.map(function (x) {
+  return x * 2;
+});
 
-console.log(prueba.filter(even));
+console.log(even);
 
 //prueba.push(5);
 
