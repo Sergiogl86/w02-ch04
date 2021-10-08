@@ -58,41 +58,6 @@ class SkylabArray {
   }
 }
 
-const prueba = new SkylabArray();
-
-prueba.push("caca");
-
-prueba.push(25);
-
-prueba.push(35);
-
-prueba.push(52);
-
-//console.log(prueba[1]);
-
-//console.log(prueba);
-
-const even = prueba.map(function (x) {
-  return x * 2;
-});
-
-console.log(even);
-
-//prueba.push(5);
-
-//const algo = new Array();
-
-//console.log(algo.some( > 1));
-
-//console.log(prueba);
-
-/* const prueba = ['a', 'b', 'c'],
-
-function length(array) {
-  
-return arrayLength
-} */
-
 module.exports = {
   SkylabArray,
 };
