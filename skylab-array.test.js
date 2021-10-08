@@ -79,7 +79,7 @@ describe("Given find function", () => {
   });
 });
 describe("Given filter function", () => {
-  describe("When we have 'nuevaArray =[10, 5, 6, 9]' and it receives SkylabArray.find((element) => element < 7)", () => {
+  describe("When we have 'nuevaArray =[10, 5, 6, 9]' and it receives SkylabArray.filter((element) => element < 7)", () => {
     test("Then it should return [5, 6]", () => {
       const input = (element) => element < 7;
       const expected = [5, 6];
