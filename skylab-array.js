@@ -3,10 +3,17 @@
 class SkylabArray {
   length = 0;
 
+  constructor() {
+    this.length = 0;
+    for (let i = 0, j = arguments.length; i < j; i++) {
+      this, this.push(arguments[i]);
+    }
+  }
+
   push(value) {
     this[this.length] = value;
     this.length = this.length + 1;
-    return this.length
+    return this.length;
   }
 
   some(value) {
@@ -59,26 +66,20 @@ class SkylabArray {
   }
 }
 
-const prueba = new SkylabArray();
+const prueba = new SkylabArray(1, 2, 4, 5);
 
-prueba.push("caca");
-
-prueba.push(25);
-
-prueba.push(35);
-
-prueba.push(52);
+console.log(prueba);
 
 //console.log(prueba[1]);
 
 //console.log(prueba);
 
-const even = prueba.map(function (x) {
-  return x * 2;
+/*const even = prueba.map(function (x) {
+  return Math.sqrt(x);
 });
 
 console.log(even);
-
+*/
 //prueba.push(5);
 
 //const algo = new Array();
@@ -93,3 +94,5 @@ function length(array) {
   
 return arrayLength
 } */
+
+module.exports = { SkylabArray };

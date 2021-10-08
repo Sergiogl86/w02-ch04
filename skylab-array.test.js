@@ -64,3 +64,18 @@ describe("Given some function", () => {
     });
   });
 });
+
+describe("When we have 'nuevaArray =[3, 5, 7, 9]' and it receives SkylabArray.map( function = > return Math.sqrt(x))", () => {
+  test("Then it should return sqrt of each array element", () => {
+    const input = function (x) {
+      return Math.sqrt(x);
+    };
+    const expected = [5, 3];
+
+    const nuevaArray = [25, 9];
+
+    const result = nuevaArray.map(input);
+
+    expect(result).toEqual(expected);
+  });
+});
