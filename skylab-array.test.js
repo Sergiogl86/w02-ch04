@@ -1,7 +1,7 @@
 const { SkylabArray } = require("./skylab-array");
 
-let nuevaArray = new SkylabArray();
-
+// let nuevaArray = new SkylabArray();
+/*
 describe("Given push function", () => {
   describe("When it receives SkylabArray.push(5)", () => {
     test("Then it should return '1'", () => {
@@ -78,13 +78,14 @@ describe("Given find function", () => {
     });
   });
 });
+*/
 describe("Given filter function", () => {
   describe("When we have 'nuevaArray =[10, 5, 6, 9]' and it receives SkylabArray.filter((element) => element < 7)", () => {
     test("Then it should return [5, 6]", () => {
       const input = (element) => element < 7;
-      const expected = [5, 6];
+      const expected = { 0: 5, 1: 6, length: 2 };
 
-      nuevaArray = [10, 5, 6, 9];
+      const nuevaArray = new SkylabArray(10, 5, 6, 9);
 
       const result = nuevaArray.filter(input);
 
@@ -93,14 +94,14 @@ describe("Given filter function", () => {
   });
 });
 describe("Given map function", () => {
-  describe("When we have 'nuevaArray =[3, 5, 7, 9]' and it receives SkylabArray.map( function = > return Math.sqrt(x))", () => {
+  describe("When we have 'nuevaArray =[25, 9]' and it receives SkylabArray.map( function = > return Math.sqrt(x))", () => {
     test("Then it should return sqrt of each array element", () => {
       const input = function (x) {
         return Math.sqrt(x);
       };
-      const expected = [5, 3];
+      const expected = { 0: 5, 1: 3, length: 2 };
 
-      const nuevaArray = [25, 9];
+      const nuevaArray = new SkylabArray(25, 9);
 
       const result = nuevaArray.map(input);
 
